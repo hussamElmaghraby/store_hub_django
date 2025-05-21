@@ -1,7 +1,10 @@
+from django.contrib.auth.models import User
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import viewsets, filters
+from rest_framework import viewsets, filters, generics
+from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly
+
 from .models import Product, Category
-from .serializers import ProductSerializer, CategorySerializer
+from .serializers import ProductSerializer, CategorySerializer, UserRegistrationSerializer
 
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -14,8 +17,16 @@ class ProductViewSet(viewsets.ModelViewSet):
     ordering_fields = ['price', 'created_at' , 'updated_at']
     # /products/?category=electronics
     filterset_fields = ['category']
+    #  for products only
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+
+class UserRegistrationView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    permission_classes =  [AllowAny]
+    serializer_class = UserRegistrationSerializer

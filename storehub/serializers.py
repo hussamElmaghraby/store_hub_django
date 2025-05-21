@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from rest_framework import serializers
 from .models import Product, Category
 
@@ -19,3 +20,13 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description' , 'image'
                     , 'price', 'stock', 'created_at',
                     'updated_at', 'category', 'category_id']
+
+
+class UserRegistrationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password']
+        extra_kwargs = {'password': {'write_only': True}}
+        # execute save mehtod + hashing the password text
+    def create(self, validated_data):
+        return User.objects.create_user(**validated_data)

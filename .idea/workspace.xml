@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c09ae3ac-32ee-427e-8016-dc9063cd73a9" name="Changes" comment="imgrations">
+    <list default="true" id="c09ae3ac-32ee-427e-8016-dc9063cd73a9" name="Changes" comment="adding jwt integrations.">
+      <change afterPath="$PROJECT_DIR$/storehub/permissions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_hub_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/store_hub_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_hub_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store_hub_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storehub/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storehub/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storehub/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/views.py" afterDir="false" />
     </list>
@@ -120,7 +118,8 @@
       <workItem from="1747567875348" duration="3574000" />
       <workItem from="1747573649831" duration="5000" />
       <workItem from="1747723247078" duration="7233000" />
-      <workItem from="1747808693997" duration="8361000" />
+      <workItem from="1747808693997" duration="8454000" />
+      <workItem from="1747821138880" duration="2572000" />
     </task>
     <task id="LOCAL-00001" summary="adding product &amp;  categories models &amp;  views">
       <option name="closed" value="true" />
@@ -154,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747741223313</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding jwt integrations.">
+      <option name="closed" value="true" />
+      <created>1747819487599</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747819487599</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +171,8 @@
     <MESSAGE value="adding product &amp;  categories models &amp;  views" />
     <MESSAGE value="adding filters and ordering  + image in product." />
     <MESSAGE value="imgrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="imgrations" />
+    <MESSAGE value="adding jwt integrations." />
+    <option name="LAST_COMMIT_MESSAGE" value="adding jwt integrations." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -186,6 +194,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/store_hub_project$urls.coverage" NAME="urls Coverage Results" MODIFIED="1747567973935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/storehub" />
-    <SUITE FILE_PATH="coverage/store_hub_project$manage.coverage" NAME="manage Coverage Results" MODIFIED="1747819311666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/store_hub_project$manage.coverage" NAME="manage Coverage Results" MODIFIED="1747824692877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c09ae3ac-32ee-427e-8016-dc9063cd73a9" name="Changes" comment="adding jwt integrations.">
-      <change afterPath="$PROJECT_DIR$/storehub/permissions.py" afterDir="false" />
+    <list default="true" id="c09ae3ac-32ee-427e-8016-dc9063cd73a9" name="Changes" comment="adding user profile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storehub/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storehub/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storehub/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +117,8 @@
       <workItem from="1747573649831" duration="5000" />
       <workItem from="1747723247078" duration="7233000" />
       <workItem from="1747808693997" duration="8454000" />
-      <workItem from="1747821138880" duration="2572000" />
+      <workItem from="1747821138880" duration="3698000" />
+      <workItem from="1747928611723" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="adding product &amp;  categories models &amp;  views">
       <option name="closed" value="true" />
@@ -161,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747819487599</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="adding user profile">
+      <option name="closed" value="true" />
+      <created>1747824851080</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747824851080</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +179,8 @@
     <MESSAGE value="adding filters and ordering  + image in product." />
     <MESSAGE value="imgrations" />
     <MESSAGE value="adding jwt integrations." />
-    <option name="LAST_COMMIT_MESSAGE" value="adding jwt integrations." />
+    <MESSAGE value="adding user profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding user profile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

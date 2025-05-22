@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c09ae3ac-32ee-427e-8016-dc9063cd73a9" name="Changes" comment="adding user profile">
+    <list default="true" id="c09ae3ac-32ee-427e-8016-dc9063cd73a9" name="Changes" comment="order models.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storehub/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storehub/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storehub/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storehub/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/storehub/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +120,7 @@
       <workItem from="1747723247078" duration="7233000" />
       <workItem from="1747808693997" duration="8454000" />
       <workItem from="1747821138880" duration="3698000" />
-      <workItem from="1747928611723" duration="1700000" />
+      <workItem from="1747928611723" duration="4473000" />
     </task>
     <task id="LOCAL-00001" summary="adding product &amp;  categories models &amp;  views">
       <option name="closed" value="true" />
@@ -168,7 +170,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747824851080</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="order models.py">
+      <option name="closed" value="true" />
+      <created>1747935207720</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747935207720</updated>
+    </task>
+    <task id="LOCAL-00008" summary="order models.py">
+      <option name="closed" value="true" />
+      <created>1747935232070</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747935232070</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +198,8 @@
     <MESSAGE value="imgrations" />
     <MESSAGE value="adding jwt integrations." />
     <MESSAGE value="adding user profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding user profile" />
+    <MESSAGE value="order models.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="order models.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -189,6 +208,16 @@
           <url>file://$PROJECT_DIR$/storehub/serializers.py</url>
           <line>31</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/storehub/views.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/storehub/views.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -202,6 +231,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/store_hub_project$urls.coverage" NAME="urls Coverage Results" MODIFIED="1747567973935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/storehub" />
-    <SUITE FILE_PATH="coverage/store_hub_project$manage.coverage" NAME="manage Coverage Results" MODIFIED="1747824692877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/store_hub_project$manage.coverage" NAME="manage Coverage Results" MODIFIED="1747941330276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

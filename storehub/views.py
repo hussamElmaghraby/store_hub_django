@@ -5,9 +5,9 @@ from rest_framework import viewsets, filters, generics
 from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly, IsAuthenticated
 from rest_framework.views import APIView
 
-from .models import Product, Category
+from .models import Product, Category, Order
 from .permissions import IsStaffReadOnly
-from .serializers import ProductSerializer, CategorySerializer, UserRegistrationSerializer
+from .serializers import ProductSerializer, CategorySerializer, UserRegistrationSerializer, OrderSerializer
 
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -16,7 +16,7 @@ class ProductViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     # / products /?search = phone
     search_fields = ['name', 'description']
-    # / products /?ordering = price or / products /?ordering = -name
+    # / products /?ordering = price or / products ordering = -name
     ordering_fields = ['price', 'created_at', 'updated_at']
     # /products/?category=electronics
     filterset_fields = ['category']
@@ -46,3 +46,22 @@ class ProfileView(APIView):
             'email': user.email,
             'is_staff': user.is_staff,
         })
+
+
+class OrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+    permission_classes = [IsAuthenticated]
+
+
+    def get_queryset(self):
+        # Only return orders of the logged-in user
+        return Order.objects.filter(user=self.request.user)
+
+
+    def perform_create(self, serializer):
+        product = serializer.validated_data['product']
+        quantity = serializer.validated_data['quantity']
+        total_price = product.price * quantity
+        serializer.save(user=self.request.user, total_price=total_price)
+

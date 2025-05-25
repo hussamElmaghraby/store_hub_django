@@ -33,18 +33,21 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         return User.objects.create_user(**validated_data)
 
 
-
-class OrderSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Order
-        fields = ['id', 'product', 'user', 'quantity', 'total_price', 'ordered_at']
-        read_only_fields = ['user' , 'total_price', 'ordered_at']
-
-
 class OrderItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = OrderItem
-        fields = [ 'quantity' , 'price', 'product']
+        fields = [ "id" , 'quantity' , 'price', 'product' , 'order' ]
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    items = OrderItemSerializer(many=True, read_only=True)
+    class Meta:
+        model = Order
+        fields = ['id', 'product', 'user', 'quantity', 'total_price', 'ordered_at' , 'items']
+        read_only_fields = ['user' , 'total_price', 'ordered_at']
+
+
+
 
 
 

@@ -5,9 +5,10 @@ from rest_framework import viewsets, filters, generics
 from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly, IsAuthenticated
 from rest_framework.views import APIView
 
-from .models import Product, Category, Order
+from .models import Product, Category, Order, OrderItem
 from .permissions import IsStaffReadOnly
-from .serializers import ProductSerializer, CategorySerializer, UserRegistrationSerializer, OrderSerializer
+from .serializers import ProductSerializer, CategorySerializer, UserRegistrationSerializer, OrderSerializer, \
+    OrderItemSerializer
 
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -65,3 +66,8 @@ class OrderViewSet(viewsets.ModelViewSet):
         total_price = product.price * quantity
         serializer.save(user=self.request.user, total_price=total_price)
 
+
+
+class OrderItemViewSet(viewsets.ModelViewSet):
+    querySet  = OrderItem.objects.all()
+    serializer_class = OrderItemSerializer

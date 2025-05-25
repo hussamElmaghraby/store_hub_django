@@ -24,7 +24,7 @@ class Product(models.Model):
 class Order(models.Model):
     # for lazy references 'Product'
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='orders')
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user')
     quantity = models.PositiveIntegerField(default=1)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
     ordered_at = models.DateTimeField(auto_now_add=True)
